@@ -1,10 +1,10 @@
 Package: ROpenCL
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: Access the OpenCL API from R
+Version: 0.1
 Date: 2011-06-02
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
+Author: Willem Ligtenberg
+Maintainer: Willem Ligtenberg <willem.ligtenberg@openanalytics.eu>
 Description: More about what it does (maybe more than one line)
 License: GPL-3
 LazyLoad: yes
