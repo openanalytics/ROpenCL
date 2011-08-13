@@ -11,7 +11,7 @@ createBuffer <- function(sContext, sMemFlag, sGlobalWorkSize, sObject){
         buffer <- createBufferFloatVector(sContext, sMemFlag, sGlobalWorkSize)
     }
     if (!(type %in% c("integer", "numeric"))){
-        print("Not supported yet")
+      stop(paste("Objects of class ", type, " are not supported yet", sep = ""))
     }
     return(buffer)
 }
@@ -44,7 +44,7 @@ enqueueWriteBuffer <- function(sQueue, sMemBuffer, sGlobalWorkSize, sObject){
         enqueueWriteBufferFloatVector(sQueue, sMemBuffer, sGlobalWorkSize, sObject)
     }
     if(!(type %in% c("integer", "numeric"))){
-        print("Not supported yet")
+      stop(paste("Objects of class ", type, " are not supported yet", sep = ""))
     }
 }
 
@@ -57,7 +57,7 @@ enqueueReadBuffer <- function(sQueue, sMemBuffer, sGlobalWorkSize, sObject){
         buffer <- enqueueReadBufferFloatVector(sQueue, sMemBuffer, sGlobalWorkSize, sObject)
     }
     if(!(type %in% c("integer", "numeric"))){
-        print("Not supported yet")
+        stop(paste("Objects of class ", type, " are not supported yet", sep = ""))
     }
     return(buffer)
 }
