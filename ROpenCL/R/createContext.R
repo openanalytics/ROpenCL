@@ -4,13 +4,13 @@ createContext <- function(){
 
 createBuffer <- function(sContext, sMemFlag, sGlobalWorkSize, sObject){
     type <- class(sObject)
-    if(type == "integer") {
+    if (type == "integer") {
         buffer <- createBufferIntegerVector(sContext, sMemFlag, sGlobalWorkSize)
     }
-    if(type == "numeric") {
+    if (type == "numeric") {
         buffer <- createBufferFloatVector(sContext, sMemFlag, sGlobalWorkSize)
     }
-    if((class(b) %in% c("integer", "numeric")) == FALSE){
+    if (!(type %in% c("integer", "numeric"))){
         print("Not supported yet")
     }
     return(buffer)
@@ -23,7 +23,7 @@ createProgram <- function(context, kernelSrc, kernelName, ...){
     
     dotList <- list(...)
     index <- 0
-    for(item in dotList){
+    for (item in dotList){
         if(class(item) == "externalptr"){
             kernel <- setKernelArgMem(kernel, index, item)
         }
@@ -43,7 +43,7 @@ enqueueWriteBuffer <- function(sQueue, sMemBuffer, sGlobalWorkSize, sObject){
     if(type == "numeric") {
         enqueueWriteBufferFloatVector(sQueue, sMemBuffer, sGlobalWorkSize, sObject)
     }
-    if((class(b) %in% c("integer", "numeric")) == FALSE){
+    if(!(type %in% c("integer", "numeric"))){
         print("Not supported yet")
     }
 }
@@ -56,7 +56,7 @@ enqueueReadBuffer <- function(sQueue, sMemBuffer, sGlobalWorkSize, sObject){
     if(type == "numeric") {
         buffer <- enqueueReadBufferFloatVector(sQueue, sMemBuffer, sGlobalWorkSize, sObject)
     }
-    if((class(b) %in% c("integer", "numeric")) == FALSE){
+    if(!(type %in% c("integer", "numeric"))){
         print("Not supported yet")
     }
     return(buffer)
