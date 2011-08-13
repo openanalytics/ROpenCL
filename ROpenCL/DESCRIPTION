@@ -5,7 +5,7 @@ Version: 0.1
 Date: 2011-06-02
 Author: Willem Ligtenberg
 Maintainer: Willem Ligtenberg <willem.ligtenberg@openanalytics.eu>
-Description: More about what it does (maybe more than one line)
+Description: Parallel Computing for R Using OpenCL
 License: GPL-3
 LazyLoad: yes
 Depends: methods, Rcpp (>= 0.9.4)
