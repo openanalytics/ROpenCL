@@ -3,23 +3,21 @@
 \alias{ROpenCL}
 \docType{package}
 \title{
-What the package does (short line)
+Access the OpenCL API from R
 }
 \description{
-More about what it does (maybe more than one line)
-~~ A concise (1-5 lines) description of the package ~~
-}
+Parallel Computing for R Using OpenCL}
 \details{
 \tabular{ll}{
 Package: \tab ROpenCL\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
+Version: \tab 0.1\cr
 Date: \tab 2011-06-02\cr
-License: \tab What license is it under?\cr
+License: \tab GPL-3\cr
 LazyLoad: \tab yes\cr
 }
-~~ An overview of how to use the package, including the most important ~~
-~~ functions ~~
+%~~ An overview of how to use the package, including the most important ~~
+%~~ functions ~~
 }
 \author{
 Willem Ligtenberg
@@ -27,15 +25,9 @@ Willem Ligtenberg
 Maintainer: Willem Ligtenberg <willem.ligtenberg@openanalytics.eu>
 }
 \references{
-~~ Literature or other references for background information ~~
+  \url{http://www.khronos.org/opencl/}
 }
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in ~~
-~~ the R documentation directory ~~
 \keyword{ package }
-\seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
-\examples{
+%\examples{
 %% ~~ simple examples of the most important functions ~~
-}
+%}
