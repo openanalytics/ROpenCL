@@ -22,9 +22,9 @@ LazyLoad: \tab yes\cr
 ~~ functions ~~
 }
 \author{
-Who wrote it
+Willem Ligtenberg
 
-Maintainer: Who to complain to <yourfault@somewhere.net>
+Maintainer: Willem Ligtenberg <willem.ligtenberg@openanalytics.eu>
 }
 \references{
 ~~ Literature or other references for background information ~~

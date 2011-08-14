@@ -11,3 +11,4 @@ LazyLoad: yes
 Depends: methods, Rcpp (>= 0.9.4)
 LinkingTo: Rcpp
 RcppModules: ropencl
+Collate: 'createContext.R' 'zzz.R'
