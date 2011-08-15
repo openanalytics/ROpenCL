@@ -1,7 +1,7 @@
 Package: ROpenCL
 Type: Package
 Title: Access the OpenCL API from R
-Version: 0.1
+Version: 0.1-0
 Date: 2011-06-02
 Author: Willem Ligtenberg
 Maintainer: Willem Ligtenberg <willem.ligtenberg@openanalytics.eu>
