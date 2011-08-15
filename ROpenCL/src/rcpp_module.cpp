@@ -17,8 +17,10 @@ RCPP_MODULE(ropencl){
     function( "setKernelArgMem"  , &setKernelArgMem , "setKernelArgMem help" ) ;
     function( "setKernelArgInt"  , &setKernelArgInt , "setKernelArgInt help" ) ;
     function( "enqueueWriteBufferFloatVector"  , &enqueueWriteBufferFloatVector , "enqueueWriteBufferFloatVector help" ) ;
+    function( "enqueueWriteBufferIntegerVector"  , &enqueueWriteBufferIntegerVector , "enqueueWriteBufferIntegerVector help" ) ;
     function( "enqueueNDRangeKernel"  , &enqueueNDRangeKernel , "enqueueNDRangeKernel help" ) ;
     function( "enqueueReadBufferFloatVector"  , &enqueueReadBufferFloatVector , "enqueueReadBufferFloatVector help" ) ;
+    function( "enqueueReadBufferIntegerVector"  , &enqueueReadBufferIntegerVector , "enqueueReadBufferIntegerVector help" ) ;
     function( "getProgramInfo"  , &getProgramInfo , "getProgramInfo help" ) ;
     function( "getContextInfo"  , &getContextInfo , "getContextInfo help" ) ;
     function( "createContext"  , &createContext, "createContext help" ) ;
