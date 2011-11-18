@@ -1,14 +1,13 @@
 \name{createProgram}
 \alias{createProgram}
-\title{Create a program...}
-\usage{createProgram(context, kernelSrc, kernelName, ...)
+\title{Creates an OpenCL program.}
+\description{
+   Creates and OpenCL program given context, kernelSrc, kernelName, and parameters.
 }
-\description{Create a program}
-\value{pointer to the kernel}
-\author{Willem Ligtenberg}
-\arguments{\item{context}{context in which to execute the kernel}
-\item{kernelSrc}{source code of the kernel function as a string}
-\item{kernelName}{name of the kernel}
-\item{...}{further arguments}
+\details{
+  High level wrapper to make creating an OpenCL program easier.
 }
-
+\references{
+\url{http://www.khronos.org/opencl/}
+}
+\keyword{OpenCL}

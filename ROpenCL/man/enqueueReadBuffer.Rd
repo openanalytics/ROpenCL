@@ -1,14 +1,13 @@
 \name{enqueueReadBuffer}
 \alias{enqueueReadBuffer}
-\title{Enqueue the read buffer...}
-\usage{enqueueReadBuffer(sQueue, sMemBuffer, sGlobalWorkSize, sObject)
+\title{Enqueues a read buffer}
+\description{
+   Enqueues a read buffer, depending on the class of the object.
 }
-\description{Enqueue the read buffer}
-\value{pointer}
-\author{Willem Ligtenberg}
-\arguments{\item{sQueue}{queue}
-\item{sMemBuffer}{membuffer}
-\item{sGlobalWorkSize}{global worksize}
-\item{sObject}{object}
+\details{
+  Calls the right enqueueReadBuffer function for the class of the object that was passed as the argument.
 }
-
+\references{
+\url{http://www.khronos.org/opencl/}
+}
+\keyword{OpenCL}

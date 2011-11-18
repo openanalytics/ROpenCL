@@ -1,14 +1,13 @@
 \name{enqueueWriteBuffer}
 \alias{enqueueWriteBuffer}
-\title{Enqueue a write buffer...}
-\usage{enqueueWriteBuffer(sQueue, sMemBuffer, sGlobalWorkSize, sObject)
+\title{Enqueues a write buffer}
+\description{
+   Enqueues a write buffer, depending on the class of the object.
 }
-\description{Enqueue a write buffer}
-\value{pointer}
-\author{Willem Ligtenberg}
-\arguments{\item{sQueue}{queue}
-\item{sMemBuffer}{membufffer}
-\item{sGlobalWorkSize}{globalworksize}
-\item{sObject}{object}
+\details{
+  Calls the right enqueueWriteBuffer function for the class of the object that was passed as the argument.
 }
-
+\references{
+\url{http://www.khronos.org/opencl/}
+}
+\keyword{OpenCL}
