@@ -1,5 +1,5 @@
 
-.onLoad <- function(pkgname, libname){
+.onLoad <- function(libname, pkgname){
     loadRcppModules()
 }
 
