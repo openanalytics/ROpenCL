@@ -1,4 +1,4 @@
 /.project
 /ROpenCL.Rcheck
 /ROpenCL_*.tar.gz
-
+/ROpenCL/src/ROpenCL.so
