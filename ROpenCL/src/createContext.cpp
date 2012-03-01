@@ -113,7 +113,7 @@ SEXP createBufferFloatVector(SEXP sContext, SEXP sMemFlag, SEXP sGlobalWorkSize)
         if (ciErr1 == CL_OUT_OF_HOST_MEMORY){std::cout << "OOHM";};
     }
     if(memFlag == "CL_MEM_WRITE_ONLY"){
-        *memBuffer = clCreateBuffer(*context, CL_MEM_WRITE_ONLY, sizeof(cl_float) * globalWorkSize, NULL, NULL);
+        *memBuffer = clCreateBuffer(*context, CL_MEM_WRITE_ONLY, sizeof(cl_float) * globalWorkSize, NULL, &ciErr1);
         if (ciErr1 != CL_SUCCESS){ std::cout << "error creating buffer float vector\n"; };
         if (ciErr1 == CL_INVALID_CONTEXT){std::cout << "invalid context";};
         if (ciErr1 == CL_INVALID_VALUE){std::cout << "invalid value";};
