@@ -1,8 +1,6 @@
 ## Use the R_HOME indirection to support installations of multiple R version
 PKG_CPPFLAGS += -I../inst/include/
-PKG_LIBS = `$(R_HOME)/bin/Rscript -e "Rcpp:::LdFlags()"`
-PKG_LIBS += -L/usr/local/cuda/lib64 -L/usr/local/cuda/lib -lOpenCL
-PKG_LIBS += -framework OpenCL
+PKG_LIBS=`if test -z "$${PKG_LIBS}"; then if uname|grep -i darwin >/dev/null; then echo '-framework OpenCL'; else echo '-lOpenCL'; fi; else echo "$${PKG_LIBS}"; fi`
 
 ## As an alternative, one can also add this code in a file 'configure'
 ##
