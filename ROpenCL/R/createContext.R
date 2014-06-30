@@ -50,6 +50,10 @@ createProgram <- function(context, kernelSrc, kernelName, ...){
         if(class(item) == "integer"){
             kernel <- setKernelArgInt(kernel, index, item)
         }
+        if(class(item) == "numeric"){
+          logdebug('Adding a Float argument to the kernel')
+          kernel <- setKernelArgFloat(kernel, index, item)
+        }
         index <- index + 1
     }
     return(kernel)

@@ -2,6 +2,7 @@
 PKG_CPPFLAGS += -I../inst/include/
 PKG_LIBS = `$(R_HOME)/bin/Rscript -e "Rcpp:::LdFlags()"`
 PKG_LIBS += -L/usr/local/cuda/lib64 -L/usr/local/cuda/lib -lOpenCL
+PKG_LIBS += -framework OpenCL
 
 ## As an alternative, one can also add this code in a file 'configure'
 ##

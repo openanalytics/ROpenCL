@@ -245,6 +245,17 @@ SEXP setKernelArgInt(SEXP sKernel, SEXP sIndex, SEXP sIntegerValue){
     return tempXPtr;
 }
 
+SEXP setKernelArgFloat(SEXP sKernel, SEXP sIndex, SEXP sFloatValue){
+    Rcpp::XPtr<cl_kernel> kernel(sKernel);
+    int argNr = Rcpp::as<int>(sIndex);
+    float floatValue = Rcpp::as<float>(sFloatValue);
+
+    cl_int ciErr1 = clSetKernelArg(*kernel, argNr, sizeof(cl_int), (void*)&floatValue);
+    if (ciErr1 != CL_SUCCESS){ std::cout << "error setting kernel arguments\n"; };
+    Rcpp::XPtr<cl_kernel> tempXPtr(kernel);
+    return tempXPtr;
+}
+
 void enqueueWriteBufferFloatVector(SEXP sQueue, SEXP sMemBuffer, SEXP sGlobalWorkSize, SEXP sObject){
     Rcpp::XPtr<cl_command_queue> queue(sQueue);
     Rcpp::XPtr<cl_mem> clMemBuffer(sMemBuffer);

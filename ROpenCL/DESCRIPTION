@@ -8,7 +8,7 @@ Maintainer: Willem Ligtenberg <willem.ligtenberg@openanalytics.eu>
 Description: Parallel Computing for R Using OpenCL
 License: GPL-3
 LazyLoad: yes
-Depends: methods, Rcpp (>= 0.9.4)
+Depends: methods, Rcpp (>= 0.9.4), logging
 LinkingTo: Rcpp
 RcppModules: ropencl
 Collate: 'createContext.R' 'zzz.R'

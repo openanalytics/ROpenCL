@@ -27,6 +27,7 @@ RcppExport SEXP buildProgram(SEXP sProgram);
 RcppExport SEXP createKernel(SEXP sProgram, SEXP sKernelName);
 RcppExport SEXP setKernelArgMem(SEXP sKernel, SEXP sIndex, SEXP sBuffer);
 RcppExport SEXP setKernelArgInt(SEXP sKernel, SEXP sIndex, SEXP sIntegerValue);
+RcppExport SEXP setKernelArgFloat(SEXP sKernel, SEXP sIndex, SEXP sFloatValue);
 RcppExport void enqueueWriteBufferFloatVector(SEXP sQueue, SEXP sMemBuffer, SEXP sGlobalWorkSize, SEXP sObject);
 RcppExport void enqueueWriteBufferIntegerVector(SEXP sQueue, SEXP sMemBuffer, SEXP sGlobalWorkSize, SEXP sObject);
 RcppExport void enqueueNDRangeKernel(SEXP sQueue, SEXP sKernel, SEXP sGlobalWorkSize, SEXP sLocalWorkSize);
