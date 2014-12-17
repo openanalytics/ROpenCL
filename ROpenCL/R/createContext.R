@@ -28,7 +28,7 @@ createBuffer <- function(sContext, sMemFlag, sGlobalWorkSize, sObject){
     return(buffer)
 }
 
-#' Create a program
+#' Build a kernel
 #' @param context context in which to execute the kernel
 #' @param kernelSrc source code of the kernel function as a string
 #' @param kernelName name of the kernel
@@ -36,7 +36,7 @@ createBuffer <- function(sContext, sMemFlag, sGlobalWorkSize, sObject){
 #' @return pointer to the kernel
 #' @author Willem Ligtenberg
 #' @export
-createProgram <- function(context, kernelSrc, kernelName, ...){
+buildKernel <- function(context, kernelSrc, kernelName, ...){
     program <- createProgramWithSource(context, kernelSrc)
     program <- buildProgram(program)
     kernel <- createKernel(program, kernelName)
